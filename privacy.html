@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Repjot</title>
-  <meta name="description" content="Repjot's privacy policy. Your notes stay on your device and in your own iCloud. We can't read them.">
+  <meta name="description" content="Repjot's privacy policy. Your notes stay on your device and in your own iCloud unless you turn on Smart Stats — and even then they're read for one purpose only: your stats.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,19 +19,32 @@
 
     <main>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated August 13, 2026</p>
+      <p class="updated">Last updated August 25, 2026</p>
 
-      <p class="lede"><strong>The short version:</strong> your workout notes live on your device and, if you turn on iCloud Sync, in your own private iCloud. We have no servers, no accounts, and no way to read what you write. The only data that ever reaches us is anonymous usage statistics.</p>
+      <p class="lede"><strong>The short version:</strong> everything you write in Repjot lives on your device and, if you turn on iCloud Sync, in your own private iCloud. If you turn on <strong>Smart Stats</strong> — it is off until you explicitly say yes — your notes are also sent to our servers and to an AI service that reads them for one purpose only: building your stats. Never for training AI models, never for ads. You can turn it off or delete your cloud data at any time in Settings.</p>
 
       <h2>Who we are</h2>
       <p>Repjot is a workout journal app for iPhone made by Long Arc Labs. If you have any question about this policy, email us at <a href="mailto:mibragimov.dev@gmail.com">mibragimov.dev@gmail.com</a>.</p>
 
-      <h2>Your notes</h2>
-      <p>Everything you write in Repjot — workout notes, bodyweight entries, exercise history, streaks — is stored locally on your device. We do not operate accounts or servers, and your notes are never transmitted to us.</p>
-      <p>If you enable <strong>iCloud Sync</strong> in Settings, your notes are additionally stored in your personal, private iCloud database (Apple CloudKit) so they sync across your devices and survive a lost phone. That data is tied to your Apple Account, protected by Apple, and inaccessible to us. You can turn iCloud Sync off at any time in the app's Settings.</p>
+      <h2>Your notes on your device</h2>
+      <p>Everything you write in Repjot — notes, bodyweight entries, exercise history, streaks — is stored locally on your device. If you enable <strong>iCloud Sync</strong> in Settings, your notes are additionally stored in your personal, private iCloud database (Apple CloudKit) so they sync across your devices and survive a lost phone. That copy is tied to your Apple Account, protected by Apple, and inaccessible to us. You can turn iCloud Sync off at any time in the app's Settings.</p>
+
+      <h2>Smart Stats (optional)</h2>
+      <p>Smart Stats turns your freeform notes into structured stats — records, trends, totals. It is <strong>opt-in</strong>: nothing leaves your device until you agree on the one-time permission screen, and you can decline it and keep using every other part of the app.</p>
+      <p>With Smart Stats <strong>on</strong>:</p>
+      <ul>
+        <li><strong>What is sent</strong> — the text of your notes, the calendar day each belongs to, your weight-unit preference, and a random anonymous identifier (see below). Nothing else: no name, no email, no contacts, no location.</li>
+        <li><strong>Where it goes</strong> — your notes are stored on our servers (hosted on <a href="https://supabase.com/privacy" rel="noopener">Supabase</a>) and processed by an AI model — Google's Gemini, reached through <a href="https://openrouter.ai/privacy" rel="noopener">OpenRouter</a> with <strong>zero-data-retention routing</strong>, meaning neither OpenRouter nor the model provider is permitted to store your note text or use it for training. A fallback model (Anthropic's Claude) under the same zero-data-retention routing may be used when the primary model is unavailable.</li>
+        <li><strong>What it is used for</strong> — one thing: reading your note and returning the structured data (exercises, sets, distances, observations) that powers your stats. Your notes are <strong>never</strong> used to train AI models, never used for advertising, and never sold or shared with data brokers.</li>
+        <li><strong>How long we keep it</strong> — until you delete it. <em>Settings → Delete Cloud Data</em> removes your notes, your extracted stats data, and the anonymous identifier from our servers immediately. Mirrors that have been inactive for 180 days are deleted automatically.</li>
+      </ul>
+      <p>With Smart Stats <strong>off</strong> (or declined), the app makes no connection to our servers at all.</p>
+
+      <h2>Anonymous identity</h2>
+      <p>Smart Stats uses an anonymous account: a random identifier created on your device, with no email, password, or sign-in. It exists solely so your notes and stats stay attached to each other on our servers. It cannot be used to identify you, and it is deleted along with everything else by Delete Cloud Data.</p>
 
       <h2>Analytics</h2>
-      <p>To understand which features are used and keep the app working well, Repjot uses <a href="https://telemetrydeck.com/privacy/" rel="noopener">TelemetryDeck</a>, a privacy-focused analytics service. It receives anonymous signals such as "a note was saved" or "onboarding was completed", along with basic device information (app version, iOS version, device model). Identifiers are anonymized before they reach TelemetryDeck's servers, and no signal ever contains the content of your notes. Nothing collected can be used to identify you, and we do not track you across other apps or websites.</p>
+      <p>To understand which features are used and keep the app working well, Repjot uses <a href="https://telemetrydeck.com/privacy/" rel="noopener">TelemetryDeck</a>, a privacy-focused analytics service. It receives anonymous signals such as "a note was saved" or "stats were updated" — counts only, along with basic device information (app version, iOS version, device model). No signal ever contains the content of your notes. Nothing collected can be used to identify you, and we do not track you across other apps or websites.</p>
 
       <h2>Purchases</h2>
       <p>If Repjot offers optional in-app purchases, payment is handled entirely by Apple — we never see your name, card, or billing details. We use <a href="https://www.revenuecat.com/privacy/" rel="noopener">RevenueCat</a> to validate purchase receipts; it receives an anonymous app-generated identifier and purchase history, not your identity.</p>
@@ -41,21 +54,24 @@
         <li>No accounts, sign-ins, or email collection</li>
         <li>No advertising and no ad trackers</li>
         <li>No selling, renting, or sharing of your data with data brokers</li>
-        <li>No reading, mining, or analyzing the content of your notes</li>
+        <li>No training of AI models on your notes</li>
+        <li>No reading of your notes for any purpose other than building your stats — and none at all unless you turn Smart Stats on</li>
       </ul>
 
       <h2>Your data, your control</h2>
       <ul>
-        <li><strong>Export</strong> — Settings → Export your notes gives you a copy of everything you've written, any time.</li>
-        <li><strong>Delete</strong> — deleting the app deletes all locally stored data. If iCloud Sync was on, you can remove the synced copy in iOS Settings → your name → iCloud → Manage Account Storage.</li>
-        <li><strong>Analytics</strong> — analytics contain no personal data, so there is nothing to link back to you or delete on request.</li>
+        <li><strong>Consent</strong> — Smart Stats asks once, plainly, before anything is uploaded. Decline and the app stays fully local.</li>
+        <li><strong>Revoke</strong> — Settings → Smart Stats turns uploads off at any time.</li>
+        <li><strong>Delete cloud data</strong> — Settings → Delete Cloud Data removes everything Repjot holds on its servers, immediately. Your journal on the device is untouched.</li>
+        <li><strong>Export</strong> — Settings → Export Notes gives you a copy of everything you've written, any time.</li>
+        <li><strong>Local data</strong> — deleting the app deletes all locally stored data. If iCloud Sync was on, you can remove the synced copy in iOS Settings → your name → iCloud → Manage Account Storage.</li>
       </ul>
 
       <h2>Children</h2>
       <p>Repjot is not directed at children under 13, and we do not knowingly collect any personal information from anyone, children included.</p>
 
       <h2>Changes to this policy</h2>
-      <p>If we ever change how Repjot handles data, we will update this page and the date at the top before the change takes effect. Material changes will also be called out in the app's release notes.</p>
+      <p>If we ever change how Repjot handles data, we will update this page and the date at the top before the change takes effect. Any new use of your notes will ask for your permission in the app again first, and material changes will also be called out in the app's release notes.</p>
     </main>
 
     <footer class="site">
